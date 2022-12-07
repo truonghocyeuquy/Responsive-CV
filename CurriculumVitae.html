@@ -14,60 +14,86 @@
     <title>KyuMiHo CV</title>
   </head>
   <body>
-    <!-- Main JS is here -->
-    <script src="javascript/main.js"></script>
-
     <!-- Header -->
     <header class="l-header" id="header">
       <nav class="nav bd-container">
         <a href="#" class="nav__logo">Hoàng</a>
-
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link">
-                <i class="bx bx-home"></i>Home
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home nav__icon"></i>Home
               </a>
             </li>
             <li class="nav__item">
               <a href="#profile" class="nav__link">
-                <i class="bx bx-user"></i>Profile
+                <i class="bx bx-user nav__icon"></i>Profile
               </a>
             </li>
             <li class="nav__item">
               <a href="#education" class="nav__link">
-                <i class="bx bx-book"></i>Education
+                <i class="bx bx-book nav__icon"></i>Education
               </a>
             </li>
             <li class="nav__item">
               <a href="#skills" class="nav__link">
-                <i class="bx bx-receipt"></i>Skills
+                <i class="bx bx-receipt nav__icon"></i>Skills
               </a>
             </li>
             <li class="nav__item">
               <a href="#experiences" class="nav__link">
-                <i class="bx bx-briefcase-alt"></i>Experiences
+                <i class="bx bx-briefcase-alt nav__icon"></i>Experiences
               </a>
             </li>
             <li class="nav__item">
               <a href="#certificates" class="nav__link">
-                <i class="bx bx-award"></i>Certificates
+                <i class="bx bx-award nav__icon"></i>Certificates
               </a>
             </li>
             <li class="nav__item">
               <a href="#references" class="nav__link">
-                <i class="bx bx-link-external"></i>References
+                <i class="bx bx-link-external nav__icon"></i>References
               </a>
             </li>
           </ul>
         </div>
+
         <div class="nav__toggle" id="nav-toggle">
           <i class="bx bx-grid-alt"></i>
         </div>
       </nav>
     </header>
-
     <!-- Scroll Top -->
-    <main class="l-main bd-container"></main>
+    <main class="l-main bd-container">
+      <div class="resume">
+        <div class="resume__left">
+          <!-- home section -->
+          <section class="home" id="home">
+            <div class="home__container section bd-grid">
+              <div class="home__data bd-grid">
+                <img src="pdf/Avatar.jpg" alt="" class="home__img" />
+                <h1 class="home__title">HOANG <b>MAI</b></h1>
+                <h3 class="home__profession">Front-end Developer</h3>
+
+                <div>
+                  <a
+                    download=""
+                    href="pdf/CV_Mai minh hoàng_English.pdf"
+                    class="home__button-movil"
+                  ></a>
+                </div>
+
+                <div class="home__address bd-grid">
+                  <span class="home__information"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="resume__right"></div>
+      </div>
+    </main>
+    <!-- Main JS is here -->
+    <script src="javascript/main.js"></script>
   </body>
 </html>
