@@ -58,6 +58,8 @@ function scrollTop() {
 }
 window.addEventListener('scroll', scrollTop);
 
+
+// light and dark mode
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'bx-sun'
@@ -106,3 +108,37 @@ function toDark(){
 function toLight(){
     favicon.setAttribute("href", "icon/LightFavicon.svg");
 }
+
+// Size added when cv is in downloading mode
+function scaleCv(){
+    document.body.classList.add('scale-cv');
+}
+
+// Size removal when cv is done with downloaded function
+function removeScale(){
+    document.body.classList.remove('scale-cv');
+}
+
+
+// Pdf Generated function
+let areaCv = document.getElementById('area-cv');
+
+let resumeButton = document.getElementById('resume-button');
+
+let opt = {
+    margin: 0,
+    filename: 'KyuResume.pdf',
+    image: {type: 'jpeg', quality:0.98},
+    html2canvas: {scale:4},
+    jsPDF: {format:'a4', orientation: 'portrait'}
+}
+
+function generateResume(){
+    html2pdf(areaCv, opt)
+}
+
+resumeButton.addEventListener('click', () =>{
+    scaleCv();
+
+    generateResume();
+}) 
